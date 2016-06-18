@@ -1,0 +1,79 @@
+# depslib dependency file v1.0
+1465710120 source:d:\beto's stuff_\ceutec\2016\c++\proyectos\programacion iii\proyecto_programacion_iii\proyecto_programacion_iii\main.cpp
+	<iostream>
+	<typeinfo>
+	<cstring>
+	<Curso.h>
+	<Clase.h>
+	<Laboratorio.h>
+	<Lista.h>
+
+1465702036 source:d:\beto's stuff_\ceutec\2016\c++\proyectos\programacion iii\proyecto_programacion_iii\proyecto_programacion_iii\src\curso.cpp
+	"Curso.h"
+	<cstring>
+	<iostream>
+
+1465702159 d:\beto's stuff_\ceutec\2016\c++\proyectos\programacion iii\proyecto_programacion_iii\proyecto_programacion_iii\include\curso.h
+
+1465699166 source:d:\beto's stuff_\ceutec\2016\c++\proyectos\programacion iii\proyecto_programacion_iii\proyecto_programacion_iii\src\clase.cpp
+	"Clase.h"
+	<cstring>
+	<iostream>
+
+1465702159 d:\beto's stuff_\ceutec\2016\c++\proyectos\programacion iii\proyecto_programacion_iii\proyecto_programacion_iii\include\clase.h
+	<Curso.h>
+
+1465702159 d:\beto's stuff_\ceutec\2016\c++\proyectos\programacion iii\proyecto_programacion_iii\proyecto_programacion_iii\include\laboratorio.h
+	<Curso.h>
+
+1465700962 source:d:\beto's stuff_\ceutec\2016\c++\proyectos\programacion iii\proyecto_programacion_iii\proyecto_programacion_iii\src\laboratorio.cpp
+	"Laboratorio.h"
+	<cstring>
+	<iostream>
+
+1465705993 d:\beto's stuff_\ceutec\2016\c++\proyectos\programacion iii\proyecto_programacion_iii\proyecto_programacion_iii\include\lista.h
+	<Curso.h>
+
+1465705993 source:d:\beto's stuff_\ceutec\2016\c++\proyectos\programacion iii\proyecto_programacion_iii\proyecto_programacion_iii\src\lista.cpp
+	"Lista.h"
+	<iostream>
+
+1465710120 source:c:\users\jlt\desktop\proyecto_programacion_iii\main.cpp
+	<iostream>
+	<typeinfo>
+	<cstring>
+	<Curso.h>
+	<Clase.h>
+	<Laboratorio.h>
+	<Lista.h>
+
+1465702158 c:\users\jlt\desktop\proyecto_programacion_iii\include\curso.h
+
+1465702158 c:\users\jlt\desktop\proyecto_programacion_iii\include\clase.h
+	<Curso.h>
+
+1465702158 c:\users\jlt\desktop\proyecto_programacion_iii\include\laboratorio.h
+	<Curso.h>
+
+1465705992 c:\users\jlt\desktop\proyecto_programacion_iii\include\lista.h
+	<Curso.h>
+
+1465699166 source:c:\users\jlt\desktop\proyecto_programacion_iii\src\clase.cpp
+	"Clase.h"
+	<cstring>
+	<iostream>
+
+1465702036 source:c:\users\jlt\desktop\proyecto_programacion_iii\src\curso.cpp
+	"Curso.h"
+	<cstring>
+	<iostream>
+
+1465700962 source:c:\users\jlt\desktop\proyecto_programacion_iii\src\laboratorio.cpp
+	"Laboratorio.h"
+	<cstring>
+	<iostream>
+
+1465705992 source:c:\users\jlt\desktop\proyecto_programacion_iii\src\lista.cpp
+	"Lista.h"
+	<iostream>
+
