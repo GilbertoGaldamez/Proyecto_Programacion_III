@@ -8,7 +8,7 @@ class Laboratorio : public Curso
 {
     public:
         Laboratorio();
-        Laboratorio(char *, char *, int, int, int, int, char *, int);
+        Laboratorio(int, char *, int, int, int, int, char *, int);
         virtual ~Laboratorio();
 
         void setNo_Laboratorio(int);
