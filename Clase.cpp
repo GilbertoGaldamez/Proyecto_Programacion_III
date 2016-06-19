@@ -14,7 +14,7 @@ Clase::Clase() : Curso()  //Invoca al constructor de clase base
     Dias = 0;
 }
 
-Clase::Clase(char *CodigoCurso, char *NombreCurso, int Hora, int Matriculados, int Cupo, int Aula, char *Catedratico, int Dias)
+Clase::Clase(int CodigoCurso, char *NombreCurso, int Hora, int Matriculados, int Cupo, int Aula, char *Catedratico, int Dias)
 : Curso(CodigoCurso, NombreCurso, Hora, Matriculados, Cupo)  //Invoca al constructor de clase base
 {
     cout << "Constructor 2 de Clase." << endl;
@@ -76,4 +76,3 @@ void Clase::imprimir() const
          << "\nCatedratico: " << getCatedratico()
          << "\nDias: " << getDias() << endl;
 }
-
