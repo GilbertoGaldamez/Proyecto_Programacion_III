@@ -6,11 +6,11 @@ class Curso
 {
     public:
         Curso();
-        Curso(char *, char *, int, int, int);
+        Curso(int, char *, int, int, int);
         virtual ~Curso();
 
-        void setCodigoCurso(const char *);
-        const char *getCodigoCurso() const;
+        void setCodigoCurso(int);
+        int getCodigoCurso() const;
 
         void setNombreCurso(const char *);
         const char *getNombreCurso() const;
@@ -36,7 +36,7 @@ class Curso
     protected:
 
     private:
-        char *CodigoCurso;
+        int CodigoCurso;
         char *NombreCurso;
         int Hora;
         int Matriculados;

@@ -8,9 +8,8 @@ Curso::Curso()
 {
     //ctor
     cout << "Constructor 1 de Curso." << endl;
-    CodigoCurso = new char[10];
+    CodigoCurso = 0;
     NombreCurso = new char[20];
-    strcpy(CodigoCurso,"000");
     strcpy(NombreCurso,"NuevoCurso");
 
     Hora = 0;
@@ -21,12 +20,11 @@ Curso::Curso()
     Siguiente = 0;
 }
 
-Curso::Curso(char *CodigoCurso, char *NombreCurso, int Hora, int Matriculados, int Cupo)
+Curso::Curso(int CodigoCurso, char *NombreCurso, int Hora, int Matriculados, int Cupo)
 {
     cout << "Constructor 2 de Curso." << endl;
-    this->CodigoCurso = new char [strlen(CodigoCurso)+1];
+    this->setCodigoCurso(CodigoCurso);
     this->NombreCurso = new char [strlen(NombreCurso)+1];
-    strcpy(this->CodigoCurso, CodigoCurso);
     strcpy(this->NombreCurso, NombreCurso);
 
     this->setHora(Hora);
@@ -41,18 +39,15 @@ Curso::~Curso()
 {
     //dtor
     cout << "Destructor de Curso" << endl;
-    delete [] CodigoCurso;
     delete [] NombreCurso;
 }
 
-void Curso::setCodigoCurso(const char *CodigoCurso)
+void Curso::setCodigoCurso(int CodigoCurso)
 {
-    delete [] this->CodigoCurso;
-    this->CodigoCurso = new char [strlen(CodigoCurso)+1];
-    strcpy(this->CodigoCurso, CodigoCurso);
+    this->CodigoCurso = (CodigoCurso > 0 && CodigoCurso <= 20) ? CodigoCurso : 1;
 }
 
-const char* Curso::getCodigoCurso() const
+int Curso::getCodigoCurso() const
 {
     return CodigoCurso;
 }

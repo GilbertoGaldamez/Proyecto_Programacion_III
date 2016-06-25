@@ -14,7 +14,7 @@ Laboratorio::Laboratorio() : Curso()
     DiasLab = 0;
 }
 
-Laboratorio::Laboratorio(char *CodigoCurso, char *NombreCurso, int Hora, int Matriculados, int Cupo, int No_Laboratorio, char *Instructor, int DiasLab)
+Laboratorio::Laboratorio(int CodigoCurso, char *NombreCurso, int Hora, int Matriculados, int Cupo, int No_Laboratorio, char *Instructor, int DiasLab)
 : Curso(CodigoCurso, NombreCurso, Hora, Matriculados, Cupo)  //Invoca al constructor de clase base
 {
     cout << "Constructor 2 de Laboratorio." << endl;

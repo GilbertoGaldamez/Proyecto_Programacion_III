@@ -1,7 +1,10 @@
 #include "Lista.h"
+#include "Curso.h"
+#include "Clase.h"
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <cstdlib>
 
 using namespace std;
 
@@ -68,7 +71,7 @@ void Lista::mostrarLista()
     }
 }
 
-Curso* Lista::buscarCurso(char *codigo)
+Curso* Lista::buscarCurso(int codigo)
 {
     Curso * temp = Inicio;
 
@@ -80,72 +83,59 @@ Curso* Lista::buscarCurso(char *codigo)
     }
     return 0;
 }
-void Archivo::agregarCurso(const char *CodigoCurso,
-                    const char *NombreCurso,
-                    int Hora, int Matriculados, int Cupos)
 
+void Lista::GuardarEnArchivo()
 {
-    if (ingresados < 100)
+    Curso * temp = Inicio;
+
+    ofstream temp1 ("Cursos.txt", ios::out | ios::binary);
+    while (temp != 0)
     {
-        Lista[ingresados] = new Curso(CodigoCurso,NombreCurso,Hora,Matriculados,Cupos);
-        ingresados++;
+        temp1.write(reinterpret_cast<const char *> (&temp),sizeof(Curso));
+        temp = temp->getSiguiente();
     }
-    else{
-        cout << "Lista llena..." << endl;
-    }
-}
-void Lista::guardarArchivoAleatorio()
-{
-    ofstream archivoSalida (nombreArchivo, ios::out | ios::binary);
-
-        archivoSalida.write(reinterpret_cast<const char *> (Lista[i]),sizeof(Curso));
+    cout <<"Datos guardados en ''Cursos.txt''" << endl;
 }
 
-void Curso::mostrarCurso() const
+Curso * Lista::leerArchivoAleatorio(int posicion)
 {
-    for (int i=0; i<ingresados; i++)
+    ifstream lectura ("Cursos.txt", ios::in | ios::binary);
+
+    Curso * cursos;
+
+    if (!lectura)
     {
-        Lista[i]->imprimir();
-        cout << endl;
+        cout << "El archivo no existe." << endl;
     }
+
+    lectura.seekg(posicion*sizeof(Curso));
+    lectura.read(reinterpret_cast<char *>(&cursos), sizeof(Curso));
+
+    cout << "Curso encontrado: " << endl;
+
+    return cursos;
 }
 
-void Curso::leerArchivoAleatorio()
+/*void Lista::leerArchivoAleatorio()
 {
-    ifstream archivoEntrada (nombreArchivo, ios::in | ios::binary);
-    if (!archivoEntrada)
+    ifstream lectura ("nombrearchivo.txt", ios::in | ios::binary);
+    if (!lectura)
     {
         cout << "El archivo no existe." << endl;
         return;
     }
 
-    Curso cursos;
+    Clase cursos;
 
-    archivoEntrada.read(reinterpret_cast<char *>(&cursos), sizeof(cursos));
-    while (archivoEntrada && !archivoEntrada.eof())
+    lectura.read(reinterpret_cast<char *>(&cursos), sizeof(Clase));
+    while (lectura && !lectura.eof())
     {
-        this->agregarCurso(cursos.getCodigoCurso(),
+        this->Clase(cursos.getCodigoCurso(),
                              cursos.getNombreCurso(),
-                             cursos.getHora(),
                              cursos.getMatriculados(),
-                             cursos.getCupos());
-        archivoEntrada.read(reinterpret_cast<char *>(&cursos), sizeof(Curso));
+                            cursos.getHora(),
+                             cursos.getCupo());
+        lectura.read(reinterpret_cast<char *>(&cursos), sizeof(Clase));
     }
 }
-
-Curso Archivo::leerArchivoAleatorio(int posicion)
-{
-    ifstream archivoEntrada (nombreArchivo, ios::in | ios::binary);
-
-    Curso cursos;
-
-    if (!archivoEntrada)
-    {
-        cout << "El archivo no existe." << endl;
-    }
-
-    archivoEntrada.seekg(posicion*sizeof(Curso));
-    archivoEntrada.read(reinterpret_cast<char *>(&cursos), sizeof(Curso));
-
-    return Cursos;
-}
+*/

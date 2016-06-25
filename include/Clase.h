@@ -8,7 +8,7 @@ class Clase : public Curso
 {
     public:
         Clase();
-        Clase(char *, char *, int, int, int, int, char *, int);
+        Clase(int, char *, int, int, int, int, char *, int);
         virtual ~Clase();
 
         void setAula(int);

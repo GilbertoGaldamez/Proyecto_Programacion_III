@@ -1,31 +1,30 @@
 #ifndef LISTA_H
 #define LISTA_H
 #include <Curso.h>
+#include <Clase.h>
 
 class Lista
 {
     public:
         Lista();
         virtual ~Lista();
+
         void insertarAlInicio(Curso *);
         void insertarAlFinal(Curso *);
         void mostrarLista();
-        Curso * buscarCurso(char *);
-        void agregarCurso(const char *, const char *,int, int, int);
-        void Mostrarcurso ; const
-        void guardarArchivoAleatorio();
+        Curso * buscarCurso(int);
+        void GuardarEnArchivo();
         void leerArchivoAleatorio();
-
-        Curso leerArchivoAleatorio (int);
+        Curso * leerArchivoAleatorio(int);
 
     protected:
-        Curso * Lista[100];
-        int ingresados;
-        char nombreArchivo [100];
         Curso *Inicio;
         Curso *Fin;
 
     private:
+        Curso *lista[50];
+        int ingresados;
+        char nombrearchivo[30];
 };
 
 #endif // LISTA_H
