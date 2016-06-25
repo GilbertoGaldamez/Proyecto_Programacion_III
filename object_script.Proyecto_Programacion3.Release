@@ -1,0 +1,17 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\clase.o
+./release\laboratorio.o
+./release\buscarclase.o
+./release\buscarlaboratorio.o
+./release\alumno.o
+./release\curso.o
+./release\lista.o
+./release\moc_mainwindow.o
+./release\moc_clase.o
+./release\moc_laboratorio.o
+./release\moc_buscarclase.o
+./release\moc_buscarlaboratorio.o
+./release\moc_alumno.o
+);

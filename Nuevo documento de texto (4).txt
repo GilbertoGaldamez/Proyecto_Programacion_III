@@ -1,0 +1,49 @@
+/*#ifndef CURSO_H
+#define CURSO_H
+
+class Curso
+{
+public:
+    Curso();
+    Curso(int, char *, int, int, int);
+            virtual ~Curso();
+
+            void setCodigoCurso(int);
+            int getCodigoCurso() const;
+
+            void setNombreCurso(const char *);
+            const char *getNombreCurso() const;
+
+            void setMatriculados(int);
+            int getMatriculados() const;
+
+            void setHora(int);
+            int getHora() const;
+
+            void setCupo(int);
+
+            virtual int getCupo() const = 0;
+
+            //virtual void imprimir() const;
+
+            void setAnterior(Curso *);
+            Curso * getAnterior();
+
+            void setSiguiente(Curso *);
+            Curso * getSiguiente();
+
+private:
+            int CodigoCurso;
+            char *NombreCurso;
+            int Hora;
+            int Matriculados;
+            int Cupo;
+
+            Curso *Anterior;
+            Curso *Siguiente;
+
+
+};
+
+#endif // CURSO_H
+*/

@@ -1,0 +1,17 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\clase.o
+./debug\laboratorio.o
+./debug\buscarclase.o
+./debug\buscarlaboratorio.o
+./debug\alumno.o
+./debug\curso.o
+./debug\lista.o
+./debug\moc_mainwindow.o
+./debug\moc_clase.o
+./debug\moc_laboratorio.o
+./debug\moc_buscarclase.o
+./debug\moc_buscarlaboratorio.o
+./debug\moc_alumno.o
+);
