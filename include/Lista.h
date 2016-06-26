@@ -23,8 +23,6 @@ class Lista // Esta es una lista doblemente enlazada
         Curso *Fin;
 
     private:
-        Curso *lista[50];
-        int ingresados;
         char nombrearchivo[30];
 };
 
