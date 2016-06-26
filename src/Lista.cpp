@@ -96,6 +96,54 @@ void Lista::GuardarEnArchivo()
     }
     cout <<"Datos guardados en ''Cursos.txt''" << endl;
 }
+// codigo para borrar determinado Curso. Agregado 06/26/2016 5:00 am.
+Curso* Lista::borrarCurso(int codigo)
+{
+    Curso * temp = this->buscarCurso(codigo);
+
+    if (temp != 0)
+    {
+        if ((temp->getSiguiente() != 0) && (temp->getAnterior() != 0))
+        {
+            temp->getAnterior()->setSiguiente(temp->getSiguiente());
+            temp->getSiguiente()->setAnterior(temp->getAnterior());
+            delete temp;
+            cout << "Curso eliminado, mostrando lista actualizada:" << endl;
+            mostrarLista();
+        }
+        else if ( (temp->getAnterior() == 0) && (temp->getSiguiente() != 0))
+        {
+            temp->getSiguiente()->setAnterior(0);
+            Inicio = temp->getSiguiente();
+            delete temp;
+            cout << "Curso eliminado, mostrando lista actualizada:" << endl;
+            mostrarLista();
+        }
+        else if ( (temp->getAnterior() != 0) && (temp->getSiguiente() == 0))
+        {
+            temp->getAnterior()->setSiguiente(0);
+            Fin = temp->getAnterior();
+            delete temp;
+            cout << "Curso eliminado, mostrando lista actualizada:" << endl;
+            mostrarLista();
+        }
+        else
+        {
+            delete temp;
+            Inicio = 0;
+            Fin = 0;
+            cout << "Curso eliminado, mostrando lista actualizada:" << endl;
+            mostrarLista();
+        }
+    }
+    else
+    {
+        cout << "No se encontro el Curso, mostrando lista:" << endl;
+        mostrarLista();
+    }
+
+    return 0;
+}
 
 Curso * Lista::leerArchivoAleatorio(int posicion)
 {
@@ -125,17 +173,17 @@ Curso * Lista::leerArchivoAleatorio(int posicion)
         return;
     }
 
-    Clase cursos;
+    Curso * cursos;
 
-    lectura.read(reinterpret_cast<char *>(&cursos), sizeof(Clase));
+    lectura.read(reinterpret_cast<char *>(&cursos), sizeof(Curso));
     while (lectura && !lectura.eof())
     {
-        this->Clase(cursos.getCodigoCurso(),
+        this->Curso(cursos.getCodigoCurso(),
                              cursos.getNombreCurso(),
                              cursos.getMatriculados(),
                             cursos.getHora(),
                              cursos.getCupo());
-        lectura.read(reinterpret_cast<char *>(&cursos), sizeof(Clase));
+        lectura.read(reinterpret_cast<char *>(&cursos), sizeof(Curso));
     }
 }
 */
