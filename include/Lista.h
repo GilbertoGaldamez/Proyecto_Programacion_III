@@ -3,7 +3,7 @@
 #include <Curso.h>
 #include <Clase.h>
 
-class Lista
+class Lista // Esta es una lista doblemente enlazada
 {
     public:
         Lista();
@@ -16,6 +16,7 @@ class Lista
         void GuardarEnArchivo();
         void leerArchivoAleatorio();
         Curso * leerArchivoAleatorio(int);
+        Curso * borrarCurso(int);
 
     protected:
         Curso *Inicio;
