@@ -67,6 +67,12 @@ int main()
     cout << endl;
     cout << endl;
 
+    cout << "Eliminar Curso en Lista enlazada..." << endl;
+    Curso *eliminarEnLista = listCursos->borrarCurso(7);
+
+    cout << endl;
+    cout << endl;
+
     cout << "Leer registro desde el archivo binario..." << endl;
     Curso *buscarEnArchivo = listCursos->leerArchivoAleatorio(7);
     buscarEnArchivo->imprimir();
@@ -81,6 +87,7 @@ int main()
     delete listCursos;
     delete buscarEnLista;
     delete buscarEnArchivo;
+    delete eliminarEnLista;
 
     return 0;
 }
