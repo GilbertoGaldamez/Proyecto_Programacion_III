@@ -4,4 +4,4 @@ Incluye la Jerarquia de clases.
 
 Branch de Gilberto.
 
-Aqui se incluye el proyecto desarrollado en CodeBlocks con toda la funcionalidad solicitada.
+Aqui se incluye la jerarquia de clases del proyecto desarrollado en CodeBlocks.
